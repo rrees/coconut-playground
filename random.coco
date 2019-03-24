@@ -1,0 +1,11 @@
+import random
+
+def dice_rolls() = (random.randint(1, 6),) :: dice_rolls()
+
+dice_rolls()$[0] |> print
+
+dice_rolls()$[0:4] |> list |> print
+
+dice_rolls()$[0:4] |> sorted |> list |> print
+
+dice_rolls()$[0:4] |> sorted |> .[1:] |> print
